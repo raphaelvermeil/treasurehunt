@@ -11,7 +11,7 @@ const ACCEPTABLE_RADIUS = 100; // Radius in meters for correct answer
 // - imageUrl: (optional) URL to a funny image to display
 // You can edit these or add more riddles as needed
 
-const riddles = [
+const riddles = [ 
     {
         text: "Where time stands still and bells ring out, historic hands point the way. A tower of old, stories untold.",
         answer: "The Old Clock Tower in the city center",
