@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Treasure Hunt</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Group Selection Screen -->
+    <div id="group-selection" class="screen active">
+        <div class="container">
+            <h1>🗺️ Treasure Hunt</h1>
+            <p>Select your group to begin the adventure!</p>
+            <select id="group-select">
+                <option value="">-- Choose Your Group --</option>
+                <option value="Group A">Group A</option>
+                <option value="Group B">Group B</option>
+                <option value="Group C">Group C</option>
+                <option value="Group D">Group D</option>
+                <option value="Group E">Group E</option>
+            </select>
+            <button id="start-btn" disabled>Start Hunt</button>
+        </div>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="header">
+            <div class="group-info">
+                <span id="current-group"></span>
+            </div>
+            <div class="progress">
+                <span id="riddle-progress"></span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Riddle Section -->
+            <div class="riddle-section">
+                <h2>Your Riddle:</h2>
+                
+                <!-- Fun content section (inside jokes, images) -->
+                <div id="fun-content" class="fun-content"></div>
+                
+                <p id="riddle-text"></p>
+                <p class="instruction">📍 Click on the map to place your marker, then click Submit!</p>
+                
+                <button id="submit-answer-btn" class="submit-answer-btn" disabled>Submit Answer</button>
+                
+                <!-- Give Up Section -->
+                <div class="give-up-section">
+                    <details>
+                        <summary>Give up? Enter password to reveal answer</summary>
+                        <div class="give-up-content">
+                            <input type="password" id="password-input" placeholder="Enter password">
+                            <button id="reveal-btn">Reveal Answer</button>
+                            <p id="password-error" class="error"></p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Answer Revealed Section -->
+                <div id="answer-section" class="answer-section hidden">
+                    <h3>✅ Answer Revealed:</h3>
+                    <p id="answer-text"></p>
+                    <button id="next-riddle-btn">Next Riddle</button>
+                </div>
+
+                <!-- Feedback -->
+                <div id="feedback" class="feedback"></div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completion Screen -->
+    <div id="completion-screen" class="screen">
+        <div class="container">
+            <h1>🎉 Congratulations!</h1>
+            <p>You've completed all the riddles!</p>
+            <p id="completion-group"></p>
+            <button id="restart-btn">Start Over</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="riddles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
