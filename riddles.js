@@ -18,7 +18,7 @@ const riddles = [
         lat: 48.8566,
         lng: 2.3522,
         funnyText: "Remember when Steve tried to climb this and got stuck? 😂",
-        imageUrl: "" // Add image URL here: "https://example.com/image.jpg"
+        imageUrl: ""// Add image URL here: "https://example.com/image.jpg"
     },
     {
         text: "Green sanctuary in the urban maze, where children play and lovers gaze. Water flows and flowers bloom.",
