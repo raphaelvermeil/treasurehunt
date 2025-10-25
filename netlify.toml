@@ -1,0 +1,17 @@
+[build]
+  # Build command (not needed for static HTML sites)
+  command = ""
+  
+  # Publish directory - the folder to deploy
+  publish = "."
+  
+  # Build image - use Ubuntu Focal 20.04
+  [build.environment]
+    NODE_VERSION = "18"
+
+# Redirect rules (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
