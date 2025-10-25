@@ -13,7 +13,7 @@ const ACCEPTABLE_RADIUS = 100; // Radius in meters for correct answer
 
 const riddles = [ 
     {
-        text: "Where time stands still and bells ring out, historic hands point the way. A tower of old, stories untold.",
+        text: "Where  time stands still and bells ring out, historic hands point the way. A tower of old, stories untold.",
         answer: "The Old Clock Tower in the city center",
         lat: 48.8566,
         lng: 2.3522,
